@@ -1,0 +1,38 @@
+label{
+    font-weight: bold;
+}
+
+th{
+font-size: 15px; 
+text-align: center;
+}
+
+td{
+font-size: 15px;
+}
+
+th, td{
+padding:  10px;
+}
+
+tr:nth-child(even){
+    background-color:rgb(245, 242, 242);
+}
+
+.cabecera{
+    background-color: black; 
+    color:white
+}
+
+.button{
+    background-color: black; 
+    color:white;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-top: 15px;
+    font-size: 18px;
+    padding: 10px;
+    height: 20%;
+    cursor: pointer;
+}
+

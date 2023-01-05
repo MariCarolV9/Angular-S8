@@ -1,0 +1,47 @@
+<section class="vh-100" style="background-color: #9A616D">
+  <section class="container py-1 h-100">
+    <section class="row d-flex justify-content-center align-items-center h-100">
+      <section class="col-12 col-md-8 col-lg-6 col-xl-5">
+        <section class="card shadow-2-strong" style="border-radius: 1rem">
+          <section class="align-items-center">
+            <section class="card-body p-4 p-lg-5 text-black">
+              <h3 class="mb-3 text-center">Registro</h3>
+
+              <section class="form-outline mb-2">
+                <label class="form-label">Nombre:</label>
+                <input class="form-control form-control-md" type="text" [(ngModel)]="persona.nombre"/>
+              </section>
+              <section class="form-outline mb-2">
+                <label class="form-label">Apellido:</label>
+                <input class="form-control form-control-md" type="text" [(ngModel)]="persona.apellido"/>
+              </section>
+              <section class="form-outline mb-2">
+                <label class="form-label">Edad:</label>
+                <input class="form-control form-control-md" type="number" [(ngModel)]="persona.edad"/>
+              </section>
+              <section class="pt-1 mb-4 text-center">
+                <input class="btn button" type="button" value="Guardar" (click)="agregar()"/>
+              </section>
+              
+              <table class="border border-dark 2 w-100">
+                <tr class="cabecera">
+                  <th>Nombre</th>
+                  <th>Apellido</th>
+                  <th>Edad</th>
+                  <th>Tipo</th>
+                </tr>
+                <tr *ngFor="let per of personas">
+                  <td>{{ per.nombre }}</td>
+                  <td>{{ per.apellido }}</td>
+                  <td>{{ per.edad }}</td>
+                  <td *ngIf="per.edad >= 18">Mayor de edad</td>
+                  <td *ngIf="per.edad < 18">Menor de edad</td>
+                </tr>
+              </table>
+            </section>
+          </section>
+        </section>
+      </section>
+    </section>
+  </section>
+</section>
